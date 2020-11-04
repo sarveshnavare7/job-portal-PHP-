@@ -32,7 +32,7 @@ else{
     }
     else
     {
-    $trigger="create trigger vacancytrigger after update on OfferLetter for each row update job set new.vacancy='$new_vacancy' where JID='$JID' ";
+    $trigger="create trigger vacancytrigger after insert on OfferLetter for each row update job set new.vacancy='$new_vacancy' where JID='$JID' ";
     $result2=mysqli_query($con,$trigger) or die(mysqli_error($con));  
     $qz= "insert into OfferLetter (Date,Aadhar,JID) values ('$d2','$aadhar1','$JID')";
     mysqli_query($con,$qz) or die(mysqli_error($con));
