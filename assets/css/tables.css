@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    font-family: "Courier-New";
+}
+
+.tablestyling{
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid black;
+    color: black;
+    text-align: center;
+}
+
+.tablestyling th{
+    border:3px solid black;
+    text-align:center;
+    vertical-align: middle;
+}
+
+.tablestyling td{
+    border:3px solid black;
+    text-align:center;
+    vertical-align: middle;
+}
