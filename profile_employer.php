@@ -17,7 +17,7 @@ header('location:login_employer.php');
   	<link rel="stylesheet" href="assets/css/styling.css">
 </head>
 <body>
-	<?php include('headerafterlogin_employee.php'); ?>
+	<?php include('headerafterlogin_employer.php'); ?>
 	<div class="bkgimg" >
 		<br>
         <div class="reg" >

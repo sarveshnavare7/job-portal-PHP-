@@ -23,10 +23,12 @@ if ( mysqli_num_rows($result)>0){
     // header('location:employee_apply.php');
 }
 else{
-    
-    
+    // $lock="LOCK TABLES applications AS aa WRITE;";
+    // $result3=mysqli_query($con,$lock)  or die(mysqli_error($con));
     $qz= "insert into applications (Aadhar,JID) values ('$aadhar1','$JID')";
     mysqli_query($con,$qz) or die(mysqli_error($con)) ;
+    // $unlock="unlock tables";
+    // mysqli_query($con,$unlock) or die(mysqli_error($con)) ;
     echo '<script> alert("Applied.");
     // window.location.href="apply_employee.php";
     </script>';
