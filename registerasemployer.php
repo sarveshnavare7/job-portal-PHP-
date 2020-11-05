@@ -27,6 +27,8 @@
 		  		<input type="text" id="estate" name="estate" placeholder="State" required><br><br>
 		  		<label for="gst">GST Number*</label>
 		  		<input type="text" id="gst" name="gst" required ><br><br>
+				<label for="aboutus">About Us*</label>
+		  		<input type="text" id="aboutus" name="aboutus" required ><br><br>
 		  		<label for="eemail">Email Id*</label><br>
 		  		<input type="email" id="eemail" name="eemail" required ><br><br>
 		  		<label for="epassword">Password*</label>

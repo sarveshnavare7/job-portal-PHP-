@@ -34,6 +34,7 @@ $t=mysqli_num_rows($d);
 					<th>JID</th>
 					<th>GST_No</th>
 					<th>Company Name</th>
+					<th>About Us</th>
 					<th>Position</th>
 					<th>Vacancy</th>
 					<th>Location</th>
@@ -58,6 +59,14 @@ $t=mysqli_num_rows($d);
 								$r1=mysqli_fetch_row($result);
 								$_SESSION['companyname']=$r1[0];
 							echo $_SESSION['companyname']; ?></td>
+
+							<td><?php 
+								$k=$r['GST_no'];
+								$q2="select About_us from Company where GST_no='$k'";
+								$result=mysqli_query($con,$q2);
+								$r2=mysqli_fetch_row($result);
+								$_SESSION['aboutus']=$r2[0];
+							echo $_SESSION['aboutus']; ?></td>
 
 							<td><?php echo $r['position']; ?></td>
 							<td><?php echo $r['vacancy']; ?></td>

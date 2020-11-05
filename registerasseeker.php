@@ -33,33 +33,6 @@
 		  		<input type="email" id="email" name="email" required ><br><br>
 		  		<label for="jpassword">Password*</label>
 		  		<input type="password" id="password" name="password" required ><br><br>	  		
-		  		
-		  		<label >Qualifications*</label><br><br>
-			  	<label style="width: 50%;" for="tenth">Secondary Education</label>
-			  	<input style="width: 40%;" type="tel" id="tenth" name="tenth"><br><br><br>
-		  		<label style="width: 50%;" for="twelth">Higher Secondary Education</label>
-		  		<input style="width: 40%;" type="tel" id="twelth" name="twelth"><br><br><br>
-		  		
-		  		<input style="width: 10%; float: left;" type="checkbox" id="graduation1" name="graduation" onclick="grad()">
-		  		<label style="width: 50%; text-align: left;" for="graduation" >Graduation</label>
-		  		<input style="width: 40%; display: none;" type="tel" id="graduation" name="graduation" value=" "><br><br>
-		  		
-		  		<input style="width: 10%; float: left;" type="checkbox" id="postgraduation1" name="postgraduation" onclick="postgrad()">
-		  		<label style="width: 50%; text-align: left;" for="postgraduation">Post Graduation</label>
-		  		<input style="width: 40%; display: none;" type="tel" id="postgraduation" name="postgraduation" value=" "><br><br><br>
-	  			
-		  		<label>Are You a Fresher or Experienced?*</label><br><br>
-	  			<input style="width: 10%; float: left" type="radio" id="fresher" name="experience" value="fresher" onchange="exp()">
-	  			<label for="fresher">Fresher</label><br><br>
-	  			<input style="width: 10%; float: left" type="radio" id="experienced" name="experience" value="experienced" onchange="exp()">
-	  			<label for="experienced">Experienced</label><br><br>
-
-	  			<div id="exp1" style="display: none;">
-	  				<label style="float: left; width: 50%; " for="eprevcom">Previous Company</label>
-	  				<input style="width: 50%;" type="text" id="eprevcom" name="eprevcom" value=" "><br>
-	  				<br><label style="width: 50%;" for="eduratprevcom">Duration at Previous Company</label>
-	  				<input style="width: 50%;" type="num" id="eduratprevcom" name="eduratprevcom" value=" "><br>
-	  			</div>
 	  			
 	  			<button type="submit" class="btn">Login</button><br><br>
 			</form>

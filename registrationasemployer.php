@@ -21,6 +21,7 @@ $contact = $_POST['econtactNumber'];
 $city = $_POST['ecity'];
 $state = $_POST['estate'];
 $locality = $_POST['elocality'];
+$aboutus=$_POST['aboutus'];
 // $_SESSION['gst']=$gst;
 
 $q = "select * from Company where Email='$email' and Password='$password'";
@@ -32,7 +33,7 @@ if($num == 1){
     echo "duplicate data";
 }
 else{
-    $qy= "insert into Company (Email,Password,GST_no,Name,Contact,Locality,City,State) values ('$email','$password','$gst','$name','$contact','$locality','$city','$state')";
+    $qy= "insert into Company (Email,Password,GST_no,Name,Contact,Locality,City,State,About_us) values ('$email','$password','$gst','$name','$contact','$locality','$city','$state','$aboutus')";
     mysqli_query($con,$qy);
     header('location: login_employer.php');
 }

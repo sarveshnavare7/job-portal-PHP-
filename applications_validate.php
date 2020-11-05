@@ -25,23 +25,22 @@ else{
     $vacancy= $row[0];
     $new_vacancy=((int)$vacancy-1);
     if ($vacancy<=0){
-        echo "$vacancy";
-        // echo '<script> alert("No vacancy");
-        // window.location.href="applications_employer.php";
-        // </script>';
+        echo '<script> alert("No vacancy");
+        window.location.href="applications_employer.php";
+        </script>';
     }
     else
     {
-    $trigger="create trigger vacancytrigger after insert on OfferLetter for each row update job set new.vacancy='$new_vacancy' where JID='$JID' ";
+    $trigger="create trigger vacancytrigger after insert on OfferLetter for each row update job set vacancy='$new_vacancy' where JID='$JID' ";
     $result2=mysqli_query($con,$trigger) or die(mysqli_error($con));  
     $qz= "insert into OfferLetter (Date,Aadhar,JID) values ('$d2','$aadhar1','$JID')";
     mysqli_query($con,$qz) or die(mysqli_error($con));
     echo "$new_vacancy";      
-    // $remove="drop trigger vacancytrigger";
-    // $result3=mysqli_query($con,$remove) or die(mysqli_error($con));   
-    // echo '<script> alert("Accepted");
-    // window.location.href="home_employer.php";
-    // </script>';
+    $remove="drop trigger vacancytrigger";
+    $result3=mysqli_query($con,$remove) or die(mysqli_error($con));   
+    echo '<script> alert("Accepted");
+    window.location.href="home_employer.php";
+    </script>';
     }
     
 }

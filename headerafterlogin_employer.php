@@ -7,7 +7,7 @@
 <img src="assets/images/logo.png" id="logo">
 	<div class="row-header" id="row-header">
         <div class="column">
-        <a href=".php" >Profile</a>
+        <a href="profile_employer.php" >Profile</a>
         </div>
         <div class="column">
         <a href="applications_employer.php" >Applications</a>

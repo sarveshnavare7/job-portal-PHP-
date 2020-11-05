@@ -35,7 +35,7 @@ $t=mysqli_num_rows($d);
 					<th>LetterId</th>
                     <th>Date</th>
 					<th>Aadhar</th>
-                    <th>JID</th>				
+					<th>Company Name</th>				
 					<th>Position</th>
 					<th>Location</th>
 					<th>Salary</th>
@@ -50,7 +50,14 @@ $t=mysqli_num_rows($d);
 							<td><?php echo $r['LetterId']; ?></td>
 							<td><?php echo $r['Date']; ?></td>
                             <td><?php echo $r['Aadhar']; ?></td>
-                            <td><?php echo $r['JID']; ?></td>
+
+							<td><?php 
+								$k=$r['JID'];
+								$q2="select Name from company where GST_no in (Select GST_no from job where JID='$k')";
+								$result=mysqli_query($con,$q2);
+								$r1=mysqli_fetch_row($result);
+								$_SESSION['companyname']=$r1[0];
+							echo $_SESSION['companyname']; ?></td>
 
 							<td><?php 
 								$k=$r['JID'];
