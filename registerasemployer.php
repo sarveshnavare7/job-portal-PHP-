@@ -33,7 +33,7 @@
 		  		<input type="email" id="eemail" name="eemail" required ><br><br>
 		  		<label for="epassword">Password*</label>
 		  		<input type="password" id="epassword" name="epassword" required ><br><br>
-		  		<button type="submit" class="btn">Login</button><br><br>
+		  		<button type="submit" class="btn">Register</button><br><br>
 			</form>
 		</div>
 	</div>

@@ -30,20 +30,9 @@ else{
     // $unlock="unlock tables";
     // mysqli_query($con,$unlock) or die(mysqli_error($con)) ;
     echo '<script> alert("Applied.");
-    // window.location.href="apply_employee.php";
+    window.location.href="apply_employee.php";
     </script>';
 }
 
 ?>
 
-
-
-<!-- f (!$dbc || mysqli_num_rows($dbc) == 0) -->
-
-<!-- $isExist = mysql_query("Select count(id) from ..."); 
-$r = mysql_fetch_array($isExist);
-if($r['COUNT(id)'] > 0){
-//item exists
-}else{
-//item doesnt exist
-} -->

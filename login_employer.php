@@ -29,7 +29,7 @@
   				</div>
 
                   <button type="submit" class="btn">Login</button>
-                  <!-- <button type="submit" class="btn" href="registerasseeker.php">Register</button> -->
+                  <!-- <input type="submit" class="btn" href="registerasemployer.php" value="Register Now"> -->
 			</form>
             
             <!-- <form action="registration.php" method="POST">

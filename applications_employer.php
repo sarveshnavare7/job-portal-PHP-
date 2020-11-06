@@ -1,14 +1,14 @@
 <?php
 
-// session_start();
-// if(!isset($_SESSION['username'])){
-// header('location:login_employer.php');
-// }
-// $con = mysqli_connect('localhost','root','');
-// mysqli_select_db($con, 'portal');
-// $gst=$_SESSION['gst'];
-// $q="select * from applications where JID in (select JID from job where GST_no='$gst')";
-// $d=mysqli_query($con,$q) or die(mysqli_error($con));
+session_start();
+if(!isset($_SESSION['username'])){
+header('location:login_employer.php');
+}
+$con = mysqli_connect('localhost','root','');
+mysqli_select_db($con, 'portal');
+$gst=$_SESSION['gst'];
+$q="select * from applications where JID in (select JID from job where GST_no='$gst')";
+$d=mysqli_query($con,$q) or die(mysqli_error($con));
 
 ?>
 
@@ -44,6 +44,7 @@
 					<th>Action</th>
 				</tr>
 				<?php
+						// error_reporting(0);
 						while($r=mysqli_fetch_assoc($d))
 						{
 				?>

@@ -19,6 +19,6 @@
         <a href="login_employer.php" >Employer Login</a>
         </div>
         <div class="column">
-        <a href="login_employee.php" >Employee Login</a>
+        <a href="login_employee.php" >Seeker Login</a>
         </div>
     </div>

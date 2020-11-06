@@ -14,7 +14,7 @@
 	<div class="bkgimg-fixed" >
 		<br><br>
 		<div class="login">
-			<h2 style="text-align: center; color: #002060">Employee Login</h2><br>
+			<h2 style="text-align: center; color: #002060">Seeker Login</h2><br>
 			
 			<form action="validation_employee.php" method="POST">
   				<div class="input-container">
@@ -28,8 +28,8 @@
   				</div>
 
                   <button type="submit" class="btn">Login</button>
-                  <!-- <button type="submit" class="btn" href="registerasseeker.php">Register</button> -->
-			</form>
+                  <!-- <button type="submit" class="btn" href="registerasseeker.php">Register Now</button>-->
+			</form> 
             
             <!-- <form action="registration.php" method="POST">
 		  		<label for="email">Email Id*</label><br>

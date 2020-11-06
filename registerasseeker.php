@@ -34,7 +34,7 @@
 		  		<label for="jpassword">Password*</label>
 		  		<input type="password" id="password" name="password" required ><br><br>	  		
 	  			
-	  			<button type="submit" class="btn">Login</button><br><br>
+	  			<button type="submit" class="btn">Register</button><br><br>
 			</form>
 		</div>
 	</div>
