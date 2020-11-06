@@ -1,20 +1,19 @@
 <?php
 
 session_start();
-if(!isset($_SESSION['username'])){
-header('location:login_employer.php');
-}
-$con = mysqli_connect('localhost','root','');
-mysqli_select_db($con, 'portal');
-foreach($_POST as $name => $content){
-    $aadhar=$name;
-}
-$a1 = $_POST['Aadhar'];
-$j1 = $_POST['JID'];
+ if(!isset($_SESSION['username'])){
+ header('location:login_employer.php');
+ }
+ $con = mysqli_connect('localhost','root','');
+ mysqli_select_db($con, 'portal');
+ foreach($_POST as $name => $content){
+     $aadhar=$name;
+ }
+ $a1 = $_POST['Aadhar'];
+ $j1 = $_POST['JID'];
 
-$q="select * from profile where Aadhar='$aadhar'";
-$d=mysqli_query($con,$q);
-
+ $q="select * from profile where Aadhar='$aadhar'";
+ $d=mysqli_query($con,$q);
 
 ?>
 
@@ -30,34 +29,32 @@ $d=mysqli_query($con,$q);
 </head>
 <body>
 	<?php include('headerafterlogin_employer.php'); ?>
-	<div class="bkgimg" style="height: auto;">
+	<div class="bkgimg-fixed" >
 		<br><br>
 		<div><center>
-				<h2>Applicant's Profile</h2>
+			<h2>Applicant's Profile</h2>
 
-                <?php
-						while($r=mysqli_fetch_assoc($d))
-						{
-				?>
-			
-                <?php echo $aadhar;?><br>
-                <?php echo $r['junior_college']; ?><br>
-				<?php echo $r['degree_college']; ?><br>
-				<?php echo $r['degree']; ?><br>
-				<?php echo $r['post_graduation']; ?><br>
-				<?php echo $r['specialization']; ?><br>
-				<?php echo $r['skills']; ?><br><br>
-                <?php 	
-						}
-				?>			
+            <?php
+				while($r=mysqli_fetch_assoc($d))
+				{
+			?>
+			<?php echo $aadhar;?><br>
+            <?php echo $r['junior_college']; ?><br>
+			<?php echo $r['degree_college']; ?><br>
+			<?php echo $r['degree']; ?><br>
+			<?php echo $r['post_graduation']; ?><br>
+			<?php echo $r['specialization']; ?><br>
+			<?php echo $r['skills']; ?><br><br>
+            <?php 	
+				}
+			?>			
 							
-
-                <form action="applications_validate.php" method="POST">
+			<form action="applications_validate.php" method="POST">
 				<input type="hidden" name="Aadhar" value="<?php echo "$a1";?>">
 				<input type="hidden" name="JID" value="<?php echo "$j1";?>">
-                <td style="border:3px solid black;padding:7px;"><input style="background-color:lightblue;border-radius:20px;height:45px;width:100px;" type="submit" value="Next" name="<?php echo $aadhar;?>" ></td>
-                </form>
-                </tr>
+                <td><button class="btn" style="width: 75%"; type="submit" name="<?php echo $aadhar;?>" >Next</button></td>
+            </form>
+        </tr>
 				
 		</div>
 	</div>

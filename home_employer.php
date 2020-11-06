@@ -21,7 +21,7 @@ header('location:login_employer.php');
 	<?php include('headerafterlogin_employer.php'); ?>
 	<div class="bkgimg" >
 		<br>
-		<h1 style="text-align: centre">Welcome <?php echo $_SESSION['username'];?><h1>
+		<h1 style="text-align: center">Welcome <?php echo $_SESSION['username'];?><h1>
 	</div>
   	<hr class="bottom">
   	<p id="copyright">&#169 Copyright 2020. All Rights Reserved</p>

@@ -45,43 +45,45 @@ $t=mysqli_num_rows($d);
 					<th>Action</th>
 				</tr>
 				<?php
-						while($r=mysqli_fetch_assoc($d))
-						{
+					while($r=mysqli_fetch_assoc($d))
+					{
 				?>
-							<tr>
-							<td><?php echo $r['JID']; ?></td>
-							<td><?php echo $r['GST_no']; ?></td>
+				<tr>
+					<td><?php echo $r['JID']; ?></td>
+					<td><?php echo $r['GST_no']; ?></td>
 
-							<td><?php 
-								$k=$r['GST_no'];
-								$q2="select Name from Company where GST_no='$k'";
-								$result=mysqli_query($con,$q2);
-								$r1=mysqli_fetch_row($result);
-								$_SESSION['companyname']=$r1[0];
-							echo $_SESSION['companyname']; ?></td>
+					<td><?php 
+						$k=$r['GST_no'];
+						$q2="select Name from Company where GST_no='$k'";
+						$result=mysqli_query($con,$q2);
+						$r1=mysqli_fetch_row($result);
+						$_SESSION['companyname']=$r1[0];
+						echo $_SESSION['companyname']; ?>
+					</td>
 
-							<td><?php 
-								$k=$r['GST_no'];
-								$q2="select About_us from Company where GST_no='$k'";
-								$result=mysqli_query($con,$q2);
-								$r2=mysqli_fetch_row($result);
-								$_SESSION['aboutus']=$r2[0];
-							echo $_SESSION['aboutus']; ?></td>
+					<td><?php 
+						$k=$r['GST_no'];
+						$q2="select About_us from Company where GST_no='$k'";
+						$result=mysqli_query($con,$q2);
+						$r2=mysqli_fetch_row($result);
+						$_SESSION['aboutus']=$r2[0];
+						echo $_SESSION['aboutus']; ?>
+					</td>
 
-							<td><?php echo $r['position']; ?></td>
-							<td><?php echo $r['vacancy']; ?></td>
-							<td><?php echo $r['location']; ?></td>
-							<td><?php echo $r['city']; ?></td>
-							<td><?php echo $r['state']; ?></td>
-							<td><?php echo $r['salary']; ?></td>
-							<td><?php echo $r['description']; ?></td>
-							<form action="apply_validate.php" method="POST">
-							<td style="border:3px solid black;padding:7px;"><input style="background-color:lightblue;border-radius:20px;height:45px;" type="submit" value="Apply" name="<?php echo $r['JID'];?>" ></td>
-							</form>
-							</tr>
+					<td><?php echo $r['position']; ?></td>
+					<td><?php echo $r['vacancy']; ?></td>
+					<td><?php echo $r['location']; ?></td>
+					<td><?php echo $r['city']; ?></td>
+					<td><?php echo $r['state']; ?></td>
+					<td><?php echo $r['salary']; ?></td>
+					<td><?php echo $r['description']; ?></td>
+					<form action="apply_validate.php" method="POST">
+						<td><button class='btn' type="submit" name="<?php echo $r['JID'];?>" >Apply</button></td> <!-- this has been replaced by a button as well -->
+					</form>
+				</tr>
 
 				<?php 	
-						}
+					}
 				?>
 				</table>
 		</div>

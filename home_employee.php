@@ -3,7 +3,6 @@
 session_start();
 if(!isset($_SESSION['username'])){
 header('location:login_employee.php');
-
 }
 ?>
 
@@ -19,9 +18,10 @@ header('location:login_employee.php');
 </head>
 <body>
 	<?php include('headerafterlogin_employee.php'); ?>
-	<div class="bkgimg" >
+	<div class="bkgimg-fixed" >
 		<br>
-		<h1 style="text-align: centre">Welcome <?php echo $_SESSION['username'];?><h1>
+		<h1 style="text-align: center">Welcome <?php echo $_SESSION['username'];?><h1>
+		<h1 style="text-align: center">Please proceed to complete your Profile.</h1>
 	</div>
 	<!-- <br> -->
 	<!-- <div><center>
