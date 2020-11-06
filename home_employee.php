@@ -4,6 +4,14 @@ session_start();
 if(!isset($_SESSION['username'])){
 header('location:login_employee.php');
 }
+$con = mysqli_connect('localhost','root','');
+mysqli_select_db($con, 'portal');
+$email=$_SESSION['username'];
+$q="select FName,LName from applicant where Email='$email' ";
+$d=mysqli_query($con,$q);
+$t=mysqli_fetch_row($d);
+$fname=$t[0];
+$lname=$t[1];
 ?>
 
 <!DOCTYPE html>
@@ -20,7 +28,8 @@ header('location:login_employee.php');
 	<?php include('headerafterlogin_employee.php'); ?>
 	<div class="bkgimg-fixed" >
 		<br>
-		<h1 style="text-align: center">Welcome <?php echo $_SESSION['username'];?><h1>
+		
+		<h1 style="text-align: center">Welcome <?php echo $fname,' ',$lname;?><h1>
 		<h1 style="text-align: center">Please proceed to complete your Profile.</h1>
 	</div>
 	<!-- <br> -->
