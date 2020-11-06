@@ -5,6 +5,14 @@ if(!isset($_SESSION['username'])){
 header('location:login_employer.php');
 
 }
+$con = mysqli_connect('localhost','root','');
+mysqli_select_db($con, 'portal');
+$gst=$_SESSION['gst'];
+$q="select Name from Company where GST_no='$gst' ";
+$d=mysqli_query($con,$q);
+$t=mysqli_fetch_row($d);
+$name=$t[0];
+
 ?>
 
 <!DOCTYPE html>
@@ -19,9 +27,9 @@ header('location:login_employer.php');
 </head>
 <body>
 	<?php include('headerafterlogin_employer.php'); ?>
-	<div class="bkgimg" >
+	<div class="bkgimg-fixed" >
 		<br>
-		<h1 style="text-align: center">Welcome <?php echo $_SESSION['username'];?><h1>
+		<h1 style="text-align: center">Welcome <?php echo $name;?><h1>
 	</div>
   	<hr class="bottom">
   	<p id="copyright">&#169 Copyright 2020. All Rights Reserved</p>
