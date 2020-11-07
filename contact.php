@@ -14,7 +14,7 @@
 	
 	<div class="bkgimg-fixed" >
 		<br><br>
-		<div class="contact" style="text-align: center;">
+		<div class="contact" style="text-align: center; color:#000000;">
 			<h2 style="text-align: center;">You can Contact Us at</h2><br><br>
 			<i class="fa fa-phone" style="font-size:24px"> +91 9699917905</i><br><br>
 			<i class="fa fa-envelope" style="font-size:24px"> info@s-three.com</i><br><br>

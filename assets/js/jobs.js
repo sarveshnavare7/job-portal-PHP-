@@ -49,8 +49,6 @@ function exp(){
   }
 }
 
-
-
 $(document).ready(function(){
   $("#myCarousel").carousel({interval: 3000});
   
@@ -63,4 +61,8 @@ $(document).ready(function(){
   });
 });
 
+
+function newFunction() {
+  window.tableheight();
+}
 

@@ -16,16 +16,21 @@
     border: 1px solid black;
     color: black;
     text-align: center;
+    table-layout: fixed;
 }
 
 .tablestyling th{
     border:3px solid black;
     text-align:center;
     vertical-align: middle;
+    padding: 4px;
 }
 
 .tablestyling td{
-    border:3px solid black;
+    border:2px solid black;
     text-align:center;
     vertical-align: middle;
+    word-wrap: break-word;
+    padding: 4px;
+    white-space: normal;
 }

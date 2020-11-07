@@ -5,20 +5,17 @@
 <link rel="stylesheet" href="assets/css/header.css">
 
 <img src="assets/images/logo.png" id="logo">
-	<div class="row-header" id="row-header">
-        <div class="column">
+<div class="row-header" id="row-header">
+    <div class="column">
         <a href="index.php" >Home</a>
-        </div>
-        <div class="column">
-        <a href="contact.php" >Contact Us</a>
-        </div>
-        <!-- <div class="column">
-        <a href="clients.php" >Our Clients</a>
-        </div> -->
-        <div class="column">
-        <a href="login_employer.php" >Employer Login</a>
-        </div>
-        <div class="column">
-        <a href="login_employee.php" >Seeker Login</a>
-        </div>
     </div>
+    <div class="column">
+        <a href="contact.php" >Contact Us</a>
+    </div>
+    <div class="column">
+        <a href="login_employer.php" >Employer Login</a>
+    </div>
+    <div class="column">
+        <a href="login_employee.php" >Seeker Login</a>
+    </div>
+</div>

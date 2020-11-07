@@ -27,10 +27,10 @@ $lname=$t[1];
 <body>
 	<?php include('headerafterlogin_employee.php'); ?>
 	<div class="bkgimg-fixed" >
-		<br>
-		
-		<h1 style="text-align: center">Welcome <?php echo $fname,' ',$lname;?><h1>
-		<h1 style="text-align: center">Please proceed to complete your Profile.</h1>
+		<br><br>
+		<h1 style="text-align: center; color: white; text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px #000080;">Welcome <?php echo $fname,' ',$lname;?><h1>
+		<h1 style="text-align: center; color: white; text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px #000080;">It's time to do the best work of your life !</h1>
+		<h1 style="text-align: center; color: white; text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px #000080;">Please proceed to complete your Profile.</h1>
 	</div>
 	<!-- <br> -->
 	<!-- <div><center>

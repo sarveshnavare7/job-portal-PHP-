@@ -1,15 +1,15 @@
 <?php
 
 session_start();
-if(!isset($_SESSION['username'])){
-header('location:login_employee.php');
-}
-$con = mysqli_connect('localhost','root','');
-mysqli_select_db($con, 'portal');
-$q="select * from job";
-$d=mysqli_query($con,$q);
+ if(!isset($_SESSION['username'])){
+ header('location:login_employee.php');
+ }
+ $con = mysqli_connect('localhost','root','');
+ mysqli_select_db($con, 'portal');
+ $q="select * from job";
+ $d=mysqli_query($con,$q);
 
-$t=mysqli_num_rows($d);
+ $t=mysqli_num_rows($d);
 
 ?>
 
@@ -22,14 +22,15 @@ $t=mysqli_num_rows($d);
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   	<script type="text/javascript" src="assets/js/jobs.js"></script>
   	<link rel="stylesheet" href="assets/css/styling.css">
+	<script type="text/javascript" src="assets/js/tables.js"></script>
 	<link rel="stylesheet" href="assets/css/tables.css">
 </head>
 <body>
 	<?php include('headerafterlogin_employee.php'); ?>
-	<div class="bkgimg">
+	<div class="bkgimg-fixed" id="divForTable">
 		<br><br>
 		<h2 style="text-align: center;">Jobs Available</h2>
-			<table class="tablestyling">
+			<table class="tablestyling" id="art">
 				<tr>
 					<th>JID</th>
 					<th>GST_No</th>

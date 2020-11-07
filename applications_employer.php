@@ -5,10 +5,10 @@ if(!isset($_SESSION['username'])){
 header('location:login_employer.php');
 }
 $con = mysqli_connect('localhost','root','');
-mysqli_select_db($con, 'portal');
-$gst=$_SESSION['gst'];
-$q="select * from applications where JID in (select JID from job where GST_no='$gst')";
-$d=mysqli_query($con,$q) or die(mysqli_error($con));
+ mysqli_select_db($con, 'portal');
+ $gst=$_SESSION['gst'];
+ $q="select * from applications where JID in (select JID from job where GST_no='$gst')";
+ $d=mysqli_query($con,$q) or die(mysqli_error($con));
 
 ?>
 
@@ -20,16 +20,17 @@ $d=mysqli_query($con,$q) or die(mysqli_error($con));
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   	<script type="text/javascript" src="assets/js/jobs.js"></script>
+	<script type="text/javascript" src="assets/js/tables.js"></script>
 	<link rel="stylesheet" href="assets/css/styling.css">
 	<link rel="stylesheet" href="assets/css/tables.css">
 </head>
 <body>
 	<?php include('headerafterlogin_employer.php'); ?>
-	<div class="bkgimg-fixed" >
+	<div class="bkgimg-fixed" id="divForTable" > 
 		<br>
 		<h2 style="text-align: center;">Applications Received</h2>
 		<br>
-			<table class="tablestyling">
+			<table class="tablestyling" id="art">
 				<tr>
 					<th>AID</th>
 					<th>Aadhar</th>
@@ -113,8 +114,8 @@ $d=mysqli_query($con,$q) or die(mysqli_error($con));
 					<form action="applicant_profile_validate.php" method="POST">
 						<input type="hidden" name="Aadhar" value="<?php echo $r['Aadhar'];?>">
 						<input type="hidden" name="JID" value="<?php echo $r['JID'];?>">
-						<td><button class="btn" type="submit" value="Next" name="<?php echo $r['Aadhar'];?>" ></td> <!--This can be replaced by a button as well-->
-					</form>
+						<td><button class="btn" type="submit" value="Next" name="<?php echo $r['Aadhar'];?>" ></button></td>
+						</form>
 				</tr>
 
 				<?php 	

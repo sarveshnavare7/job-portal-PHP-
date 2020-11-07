@@ -7,7 +7,6 @@
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   	<script type="text/javascript" src="assets/js/jobs.js"></script>
 	<link rel="stylesheet" href="assets/css/styling.css">
-	<!-- <link rel="stylesheet" href="assets/css/header.css"> -->
 </head>
 <body>
 	
