@@ -21,8 +21,6 @@ $lname = $_POST['jlname'];
 $contact = $_POST['jcontactNumber'];
 $city = $_POST['jcity'];
 $state = $_POST['jstate'];
-$age = '20';
-$no_of_applications = '5';
 
 
 $q = "select * from applicant where Email='$email' and Password='$password' and Aadhar='$aadhar'";
@@ -35,7 +33,7 @@ if($num == 1){
     header('location: registerasseeker.php');
 }
 else{
-    $qy= "insert into applicant (Email,Password,Aadhar,FName,LName,Contact,City,State,Age,No_of_applications) values ('$email','$password','$aadhar','$fname','$lname','$contact','$city','$state','$age','$no_of_applications')";
+    $qy= "insert into applicant (Email,Password,Aadhar,FName,LName,Contact,City,State) values ('$email','$password','$aadhar','$fname','$lname','$contact','$city','$state')";
     mysqli_query($con,$qy);
     header('location: login_employee.php');
 }
